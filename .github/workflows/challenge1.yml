@@ -1,0 +1,33 @@
+name: challenge-01
+
+on: push
+
+jobs:
+    job1:
+        name: First Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step one
+              run: date
+              
+              
+    job2:
+        name: Second Job
+        runs-on: windows-latest
+        steps:
+            - name: Step one
+              run: "Get-Date"
+    job3:
+        name: Third Job
+        runs-on: macos-latest
+        steps:
+            - name: Step one
+              run: date
+     job4:
+        name: Fourth Job
+        needs: [job1, job2,job3]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step one
+              run: date
+

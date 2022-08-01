@@ -8,9 +8,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Step one
-              run: date
-              
-              
+              run: date        
     job2:
         name: Second Job
         runs-on: windows-latest
@@ -23,9 +21,9 @@ jobs:
         steps:
             - name: Step one
               run: date
-     job4:
+    job4:
         name: Fourth Job
-        needs: [job1, job2,job3]
+        needs: [job1,job2,job3]
         runs-on: ubuntu-latest
         steps:
             - name: Step one

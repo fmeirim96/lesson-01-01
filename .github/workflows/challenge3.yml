@@ -1,7 +1,7 @@
 name: Challenge3
 
 env: 
-  ARTIFACT_NAME: 'artifact'
+  ARTIFACT_NAME: artifact
 
 on: [push]
 
